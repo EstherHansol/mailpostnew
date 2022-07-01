@@ -4,5 +4,5 @@ data class Comment(
     val id: Int,
     val letterId: Int,
     val content: String,
-    val timeInMills: Double,
+    val timeInMills: Long,
 )

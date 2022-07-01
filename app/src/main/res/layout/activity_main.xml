@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".ui.MainActivity">
 
         <FrameLayout
             android:id="@+id/nav_host_fragment"
@@ -35,6 +35,9 @@
             app:backgroundTint="@color/colorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/nav_view"
             app:layout_constraintRight_toRightOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            app:rippleColor="@android:color/white"
             app:srcCompat="@drawable/ic_pencil"
             app:tint="@android:color/white" />
 
