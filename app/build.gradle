@@ -2,9 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-viewBinding {
-    enabled true
-}
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -25,6 +22,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    task wrapper(type: Wrapper) {
+        gradleVersion = '7.0'
+    }
 
 // To inline the bytecode built with JVM target 1.8 into
 // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
@@ -36,6 +36,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    viewBinding {
+        enabled true
+    }
+    dataBinding {
+        enabled true
     }
 
 }
