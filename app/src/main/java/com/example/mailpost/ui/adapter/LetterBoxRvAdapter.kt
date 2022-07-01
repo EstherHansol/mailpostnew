@@ -9,7 +9,7 @@ import com.example.mailpost.R
 import com.example.mailpost.databinding.ItemLetterBoxBinding
 import com.example.mailpost.model.Letter
 
-class LetterBoxRvAdapter(private val context: Context, private var letterList: ArrayList<Letter>) :
+class LetterBoxRvAdapter(private val context: Context, private var letterList: List<Letter>) :
     RecyclerView.Adapter<LetterBoxRvAdapter.LetterBoxViewHolder>() {
 
     inner class LetterBoxViewHolder(private val binding: ItemLetterBoxBinding) :
@@ -34,7 +34,7 @@ class LetterBoxRvAdapter(private val context: Context, private var letterList: A
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LetterBoxViewHolder {
         val binding: ItemLetterBoxBinding =
-            ItemLetterBoxBinding.inflate(LayoutInflater.from(parent.context))
+            ItemLetterBoxBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return LetterBoxViewHolder(binding)
     }
 

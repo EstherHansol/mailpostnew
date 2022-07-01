@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class LetterBoxItemDecoration : RecyclerView.ItemDecoration() {
+class MarginDecoration : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,
@@ -16,11 +16,11 @@ class LetterBoxItemDecoration : RecyclerView.ItemDecoration() {
 
         val position = parent.getChildAdapterPosition(view)
         val count = state.itemCount
-        val verticalOffset = 20
-        val horizontalOffset = 12
+        val verticalOffset = 40
+//        val horizontalOffset = 12
 
-        outRect.left = horizontalOffset
-        outRect.right = horizontalOffset
+//        outRect.left = horizontalOffset
+//        outRect.right = horizontalOffset
 
         when (position) {
             0 -> {
