@@ -1,7 +1,6 @@
 package com.example.mailpost.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -9,6 +8,7 @@ import com.example.mailpost.R
 import com.example.mailpost.databinding.ActivityMainBinding
 import com.example.mailpost.ui.home.HomeFragment
 import com.example.mailpost.ui.letterbox.LetterBoxFragment
+import com.example.mailpost.ui.message.MessageFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
             R.id.navigation_message -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.nav_host_fragment, LetterBoxFragment()).commitAllowingStateLoss()
+                    .replace(R.id.nav_host_fragment, MessageFragment()).commitAllowingStateLoss()
             }
             R.id.navigation_box -> {
                 supportFragmentManager.beginTransaction()
