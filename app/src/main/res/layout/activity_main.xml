@@ -33,7 +33,7 @@
             android:layout_height="56dp"
             android:layout_margin="12dp"
             app:backgroundTint="@color/colorPrimary"
-            app:srcCompat="@drawable/ic_mail_black_24dp"
+            app:srcCompat="@drawable/ic_pencil"
             app:tint="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/nav_view"
             app:layout_constraintRight_toRightOf="parent" />

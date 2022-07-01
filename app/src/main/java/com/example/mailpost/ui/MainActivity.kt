@@ -5,7 +5,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.mailpost.databinding.ActivityMainBinding
-import com.example.mailpost.ui.LetterBoxFragment
+import com.example.mailpost.ui.letterbox.LetterBoxFragment
 import com.example.mailpost.ui.home.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

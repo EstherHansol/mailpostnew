@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/temp_project/mailpostnew/app/src/main/res/drawable/shadow_divider.xml" value="0.2365" />
         <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/fragment_letter_box.xml" value="0.22291666666666668" />
+        <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/fragment_letter_box.xml" value="0.33" />
+        <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/item_letter_box.xml" value="0.33" />
       </map>
     </option>
   </component>
