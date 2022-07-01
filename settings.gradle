@@ -1,0 +1,2 @@
+rootProject.name='Mailpost'
+include ':app'
