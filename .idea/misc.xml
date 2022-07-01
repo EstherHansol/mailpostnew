@@ -5,12 +5,14 @@
       <map>
         <entry key="..\:/temp_project/mailpostnew/app/src/main/res/drawable/shadow_divider.xml" value="0.2365" />
         <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/fragment_box.xml" value="0.23125" />
+        <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/fragment_home.xml" value="0.23125" />
         <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/fragment_letter_box.xml" value="0.33" />
         <entry key="..\:/temp_project/mailpostnew/app/src/main/res/layout/item_letter_box.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

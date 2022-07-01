@@ -5,8 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="Gold">#FFFFD700</color>
 
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
     <color name="contentGray">#292929</color>
     <color name="fromToGray">#595959</color>
     <color name="letterIconColor">#353535</color>
