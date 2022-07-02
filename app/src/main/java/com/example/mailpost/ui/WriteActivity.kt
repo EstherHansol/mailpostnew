@@ -27,8 +27,7 @@ class WriteActivity : AppCompatActivity() {
             }
 
             pubCb.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (isChecked){ pub = true }
-                else { pub = false }
+                pub = isChecked
             }
 
             doneIb.setOnClickListener {

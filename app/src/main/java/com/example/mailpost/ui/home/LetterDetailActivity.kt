@@ -1,7 +1,6 @@
 package com.example.mailpost.ui.home
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.mailpost.R
@@ -17,15 +16,11 @@ class LetterDetailActivity : AppCompatActivity() {
 
         with(binding) {
             setSupportActionBar(toolbar)
-            supportActionBar?.setDisplayShowHomeEnabled(true)
+            supportActionBar?.setDisplayShowTitleEnabled(false)
+            backBtn.setOnClickListener {
+                finish()
+            }
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.home -> finish()
-        }
-
-        return true
-    }
 }

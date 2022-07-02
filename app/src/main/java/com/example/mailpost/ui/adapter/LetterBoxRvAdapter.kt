@@ -1,6 +1,7 @@
 package com.example.mailpost.ui.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mailpost.R
 import com.example.mailpost.databinding.ItemLetterBoxBinding
 import com.example.mailpost.model.Letter
+import com.example.mailpost.ui.home.LetterDetailActivity
 
 class LetterBoxRvAdapter(private val context: Context, private var letterList: List<Letter>) :
     RecyclerView.Adapter<LetterBoxRvAdapter.LetterBoxViewHolder>() {
@@ -27,6 +29,10 @@ class LetterBoxRvAdapter(private val context: Context, private var letterList: L
                     messageIv.visibility = View.VISIBLE
                     messageCountTv.visibility = View.VISIBLE
                     messageCountTv.text = item.comments.size.toString()
+                }
+
+                root.setOnClickListener {
+                    context.startActivity(Intent(context, LetterDetailActivity::class.java))
                 }
             }
         }
