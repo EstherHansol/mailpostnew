@@ -11,4 +11,6 @@
     <color name="fromToGray">#595959</color>
     <color name="letterIconColor">#E57373</color>
     <color name="itemDividerColor">#F1F1F1</color>
+    <color name="letterDetailSubtitleColor">#787878</color>
+    <color name="letterDetailTimeColor">#9C9C9C</color>
 </resources>
