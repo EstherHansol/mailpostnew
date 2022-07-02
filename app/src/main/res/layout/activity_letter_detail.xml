@@ -14,13 +14,13 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@android:color/white"
             android:scrollbars="none"
             tools:context=".ui.home.LetterDetailActivity">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingHorizontal="12dp">
+                android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -28,11 +28,21 @@
                     android:layout_height="?actionBarSize"
                     app:layout_constraintTop_toTopOf="parent">
 
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="12dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:src="@drawable/ic_back" />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center|left"
                         android:orientation="vertical">
+
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -55,14 +65,17 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_gravity="right"
+                        android:layout_marginRight="12dp"
                         android:src="@drawable/ic_three_dots" />
 
                 </androidx.appcompat.widget.Toolbar>
+
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_iv"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
+                    android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="12dp"
                     android:src="@drawable/img_sample_profile_4"
                     app:circularflow_radiusInDP="10dp"
@@ -101,27 +114,29 @@
                     android:textColor="@android:color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/profile_iv"
                     app:layout_constraintTop_toBottomOf="@+id/profile_iv" />
 
                 <TextView
                     android:id="@+id/content_tv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="12dp"
-                    android:text="꼬물거리는 다른 강아지들과 달리 유독 움직임이 없는 한 아이에게 마음이 끌렸고, 그렇게 가족이 됐다. 토토는 집에 온 첫날부터 기침을 하며 아파했다.\n\n여름이었다."
+                    android:text="꼬물거리는 다른 강아지들과 달리 유독 움직임이 없는 한 아이에게 마음이 끌렸고, 그렇게 가족이 됐다. 뽀삐는 집에 온 첫날부터 기침을 하며 아파했다.\n\n여름이었다."
                     android:textColor="@color/contentGray"
                     android:textSize="15sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/profile_iv"
                     app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
                 <LinearLayout
                     android:id="@+id/like_container"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:gravity="center|left"
                     android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="@id/profile_iv"
                     app:layout_constraintTop_toBottomOf="@+id/content_tv">
 
                     <ImageView
@@ -184,9 +199,9 @@
                     android:clickable="true"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="4dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    app:layout_constraintLeft_toLeftOf="@id/profile_iv"
                     app:layout_constraintTop_toBottomOf="@+id/like_container">
 
                     <ImageView
@@ -210,8 +225,8 @@
                     android:id="@+id/scrap_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/btn_detail"
                     android:clickable="true"
                     android:gravity="center"
@@ -242,60 +257,67 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/typing_container"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginHorizontal="6dp"
-            android:layout_marginVertical="6dp"
-            android:background="@drawable/bg_message_typing"
-            android:orientation="horizontal"
-            android:paddingHorizontal="8dp">
+            android:background="@android:color/white">
 
-            <ImageView
-                android:id="@+id/emoji_btn"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:src="@drawable/ic_emoji"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="#AFAFAA" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/typing_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/bg_message_typing"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
 
-            <EditText
-                android:id="@+id/message_et"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="8dp"
-                android:background="@null"
-                android:hint="쪽지 내용을 입력하세요."
-                android:maxLines="1"
-                android:textColor="#111111"
-                android:textColorHint="#7E7E7E"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/emoji_btn"
-                app:layout_constraintRight_toLeftOf="@+id/send_btn"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/emoji_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_emoji"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#AFAFAA" />
 
-            <ImageView
-                android:id="@+id/send_btn"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:src="@drawable/ic_message_done"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/colorPrimary" />
+                <EditText
+                    android:id="@+id/message_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="쪽지 내용을 입력하세요."
+                    android:maxLines="1"
+                    android:textColor="#111111"
+                    android:textColorHint="#7E7E7E"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/emoji_btn"
+                    app:layout_constraintRight_toLeftOf="@+id/send_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/send_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_message_done"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/colorPrimary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </RelativeLayout>
 </layout>

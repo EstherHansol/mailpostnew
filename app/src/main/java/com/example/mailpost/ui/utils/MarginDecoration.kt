@@ -22,17 +22,8 @@ class MarginDecoration : RecyclerView.ItemDecoration() {
 //        outRect.left = horizontalOffset
 //        outRect.right = horizontalOffset
 
-        when (position) {
-            0 -> {
-                outRect.top == verticalOffset
-            }
-            count - 1 -> {
-                outRect.bottom = verticalOffset
-            }
-            else -> {
-                outRect.top = verticalOffset
-                outRect.bottom = verticalOffset
-            }
+        if (position != 0) {
+            outRect.top = verticalOffset
         }
     }
 }

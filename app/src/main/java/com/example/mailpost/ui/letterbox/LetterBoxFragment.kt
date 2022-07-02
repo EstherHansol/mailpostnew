@@ -30,7 +30,6 @@ class LetterBoxFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d("TAG", "onViewCreated: " + "test")
         val marginDecoration = MarginDecoration()
         val dividerDecoration = DividerDecoration(
             50f,
